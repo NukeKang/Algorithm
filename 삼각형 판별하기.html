@@ -8,6 +8,7 @@
             function solution(a, b, c){
                 let answer;
                 let max;
+                let sumOfSides = (a + b + c);
                 //삼각형이 되기 위한 조건:
                 // 가장 큰 변의 길이 < 나머지 두 변 길이의  합
                 if (a > b) {
@@ -17,7 +18,7 @@
                     max = c;
                 }
 
-                if (max < (a + b + c - max)) {
+                if (max < (sumOfSides - max)) {
                     answer = "YES"
                 } else {
                     answer = "NO"
