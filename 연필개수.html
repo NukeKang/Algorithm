@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n){
+                let answer;
+
+                /*연필 1다스는 12자루.
+                n은 사람 수
+                25명 일 때는 12로 나누면
+                2다스 하고 1다스가 더 필요
+                43명 일 때는 12로 나누면
+                3다스 하고 1다스가 더 필요
+                즉, 나눴을 때 나머지가 있으면 
+                answer에다가 +1 하면 됨.
+                */
+                if (n % 12 !== 0) {
+                    answer = parseInt(n/12) + 1;
+                } else {
+                    answer = n/12
+                }
+
+                return answer;
+            }
+
+            console.log(solution(178));
+        </script>
+    </body>
+</html>
