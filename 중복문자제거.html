@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                let answer = "";
+                // 1. solution (indexOf)
+                // for (let i = 0; i < s.length; i++) {
+                //     // console.log(s.indexOf(s[i]), i, s[i])
+                //     if (s.indexOf(s[i]) === i) answer += s[i]
+                // }
+
+                // 2. indexOf는 찾지 못하면 -1을 반환하는 성질 이용
+                // for (let i = 0; i < s.length; i++){
+                //     if (answer.indexOf(s[i]) === -1) answer += s[i]
+                // }
+
+                return answer;
+            }
+            console.log(solution("ksekkset"));
+        </script>
+    </body>
+</html>
