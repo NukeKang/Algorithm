@@ -6,17 +6,33 @@
     <body>
         <script>
             function solution(arr){
-                let answer = [];
-                let minNum = Number.MIN_SAFE_INTEGER;
+                // 첫 번째 방법
+                // let answer = [];
+                // let minNum = Number.MIN_SAFE_INTEGER;
 
-                for (let i = 0; i < arr.length; i++) {
-                    if (arr[i] > minNum) {
-                        minNum = arr[i];
-                        answer.push(arr[i]);
+                // for (let i = 0; i < arr.length; i++) {
+                //     if (arr[i] > minNum) {
+                //         minNum = arr[i];
+                //         answer.push(arr[i]);
+                //     }
+                // }
+
+                // return answer.length;
+                
+                // 두 번째 방법
+                // 첫 번째 사람은 무조건 보이니까 count 1부터 시작
+                let answer = 1;
+                // 가장 큰 사람을 일단 arr배열의 첫 번째 요소로 둔다.
+                let max = arr[0];
+
+                for (let i = 1; i < arr.length; i++) {
+                    if (arr[i] > max) {
+                        answer++;
+                        max = arr[i];
                     }
                 }
-                console.log(answer)
-                return answer.length;
+                return answer;
+                // 위에보다 훨씬 간단
             }
 
             let arr=[130, 135, 148, 140, 145, 150, 150, 153];
