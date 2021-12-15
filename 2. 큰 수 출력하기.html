@@ -10,6 +10,7 @@
                 //맨 앞에 미리 넣어주면 될 것을.....
                 // answer.push(arr[0]);
 
+<<<<<<< HEAD:2. 큰 수 출력하기.html
                 // for (let i = 0; i < arr.length; i++) {
                 //     if (arr[i] < arr[i + 1]) answer.push(arr[i + 1])
                 //     }
@@ -17,6 +18,18 @@
                     if (acc < cur) answer.push(cur);
                     return cur;
                 }, 0)
+=======
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] < arr[i + 1]) answer.push(arr[i + 1])
+                    }
+                
+                //reduce() 사용하기
+                 let findBigNum = arr.reduce((acc, cur) => {
+                    if (acc < cur) answer.push(cur);
+                    return cur;
+                }, 0)
+                 
+>>>>>>> b5180d59d1cc357af2107f8d68db118b749d4444:큰 수 출력하기.html
                 return answer;
             }
 
