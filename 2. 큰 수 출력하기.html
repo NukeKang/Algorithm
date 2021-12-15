@@ -8,11 +8,15 @@
             function solution(arr){
                 let answer=[];
                 //맨 앞에 미리 넣어주면 될 것을.....
-                answer.push(arr[0]);
+                // answer.push(arr[0]);
 
-                for (let i = 0; i < arr.length; i++) {
-                    if (arr[i] < arr[i + 1]) answer.push(arr[i + 1])
-                    }
+                // for (let i = 0; i < arr.length; i++) {
+                //     if (arr[i] < arr[i + 1]) answer.push(arr[i + 1])
+                //     }
+                let findBigNum = arr.reduce((acc, cur) => {
+                    if (acc < cur) answer.push(cur);
+                    return cur;
+                }, 0)
                 return answer;
             }
 
