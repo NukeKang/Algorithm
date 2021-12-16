@@ -6,21 +6,22 @@
     <body>
         <script>
             function solution(a, b){         
-                let answer = '';
+                let answer = "";
                  
                 for (let i = 0; i < a.length; i++) {
-                    //a 이길 때
-                    if ((a[i] - b[i]) === 1 || (a[i] - b[i]) === -2) {
-                        answer += "A "
-                    //b 이길 때
-                    } else if ((b[i] - a[i]) === 1 || (b[i] - a[i]) === -2) {
-                        answer += "B "
-                    //비길 때
-                    } else if (a[i] === b[i]) {
+                    if (a[i] === b[i]) {
                         answer += "D "
-                    }
+                    } else if (a[i] === 1 && b[i] === 3) {
+                        answer += "A "
+                    } else if (a[i] === 2 && b[i] === 1) {
+                        answer += "A "
+                    } else if (a[i] === 3 && b[i] === 2) {
+                        answer += "A "
+                    } else {
+                        answer += "B "
+                    }                
                 }
-
+                
                 return answer;
             }
             let a=[2, 3, 3, 1, 3];
