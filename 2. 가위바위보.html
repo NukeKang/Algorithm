@@ -7,12 +7,15 @@
         <script>
             function solution(a, b){         
                 let answer = '';
-                 //when a win
+                 
                 for (let i = 0; i < a.length; i++) {
+                    //a 이길 때
                     if ((a[i] - b[i]) === 1 || (a[i] - b[i]) === -2) {
                         answer += "A "
+                    //b 이길 때
                     } else if ((b[i] - a[i]) === 1 || (b[i] - a[i]) === -2) {
                         answer += "B "
+                    //비길 때
                     } else if (a[i] === b[i]) {
                         answer += "D "
                     }
