@@ -6,6 +6,7 @@
     <body>
         <script>
             function solution(arr){
+                //answer에 가장 작은 값을 넣어주는 이유는 sum1과 sum2의 최대값을 저장해놓는 곳으로 사용하기 위해.
                 let answer = Number.MIN_SAFE_INTEGER;
                 let sum1 = 0;
                 let sum2 = 0;
@@ -19,6 +20,8 @@
                         sum1 += arr[i][j];
                         sum2 += arr[j][i];
                     }
+                    // answer 할당문을 i for문 밖에 쓰면 sum1, 2의 마지막 값만 할당 되므로 안에 써야한다!! 
+                    // 그러면 94가나옴.
                     answer = Math.max(answer, sum1, sum2);
                 }
                 //대각선 2개
