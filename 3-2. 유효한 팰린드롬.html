@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution (s) {
+                // 1) 정규식
+                // let answer = "YES";
+                // s = s.toLowerCase().replace(/[^a-z]/g, '');
+                // if (s.split('').reverse().join('') !== s) {
+                //     return "NO"
+                // }
+                // return answer;
+                
+                // 2) 아스키 코드
+                let answer = "YES";
+                let newStr = "";
+
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i].charCodeAt() >= 65 && str[i].charCodeAt() <= 90 || str[i].charCodeAt() >= 97 && str[i].charCodeAt() <= 122) {
+                        newStr += str[i]
+                    }
+                }
+                
+                s = newStr.toLowerCase();
+                if (s.split('').reverse().join('') !== s) {
+                    return "NO"
+                }
+                return answer;
+            }
+            
+            let str="found7, time: study; Yduts; emit, 7Dnuof";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
