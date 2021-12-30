@@ -6,16 +6,27 @@
     <body>
         <script>
             function solution (str) {
+            // 정규식 사용법
+
                 // let answer = str.replace(/[^0-9]/g, '');
 
                 // return parseInt(answer);
            
-            //아스키코드 사용법
-                let answer = ''
+            // 아스키코드 사용법
+                // let answer = ''
                 
-                for (let i = 0; i < str.length; i++) {
-                    if (str[i].charCodeAt() >= 48 && str[i].charCodeAt() <= 57) {
-                        answer += str[i]
+                // for (let i = 0; i < str.length; i++) {
+                //     if (str[i].charCodeAt() >= 48 && str[i].charCodeAt() <= 57) {
+                //         answer += str[i]
+                //     }
+                // }
+                // return parseInt(answer);
+            // isNaN 사용법
+                let answer = "";
+                
+                for (let x of str) {
+                    if (!isNaN(x)) {
+                        answer += x;
                     }
                 }
                 return parseInt(answer);
