@@ -6,11 +6,11 @@
     <body>
         <script>
             function solution(s){
-                let answer =[];
+                let answer = ""; //문자열로
                 let count = 1;
-                s = s + " ";
-
-                for (let i = 0; i < s.length - 1; i++) {
+                s = s + " "; //문자열 끝은 비교할 것이 없으므로 빈 칸을 준다. 
+                
+                for (let i = 0; i < s.length - 1; i++) { // 문자열을 한칸 늘렸으니 길이는 하나 줄여줘야 함.
                     if (s[i] === s[i + 1]) {
                         count++
                     } else {
