@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n, arr){
+                let answer, max = Number.MIN_SAFE_INTEGER;
+                // 풀이 (1)
+                for (let x of arr) {
+                    let sum = 0; let tmp = x; //기존 숫자 유지하기 위해 새로운 곳에 할당.
+                    sum += tmp % 10 + (Math.floor(tmp / 10) % 10) + Math.floor(Math.floor(tmp / 10) / 10) // 각 자릿수 합
+
+                    if (sum > max) { //최댓값 구하기
+                        max = sum;
+                        answer = x;
+                    } else if (sum === max) { // 합이 같으면 원래 큰 숫자를 답으로 도출
+                        if (answer < x) {
+                            return answer = x;
+                        }
+                    }
+                }
+                // 풀이 (2) 각 자릿수 합을 내장함수를 통해서 구할 수 있음.
+                // for (let x of arr) {
+                //     let sum = x.toString().split("").reduce((acc, cur) => acc + Number(cur), 0) // 2번째 파라미터를 Number화 시켜주는게 포인트.
+                // }
+
+                return answer;
+            }
+            
+            let arr=[128, 460, 603, 40, 521, 137, 123];
+            console.log(solution(7, arr));
+        </script>
+    </body>
+</html>
