@@ -12,10 +12,10 @@
 
                 for (let i = 0; i < n; i++) {
                     let money = m - (product[i][0]/2 + product[i][1]) // 총 돈에서 할인된거는 빼기
-                    let cnt = 1;
+                    let cnt = 1; // 한명 꺼는 샀으니까 cnt는 1부터 시작.
                     
                     for (let j = 0; j < n; j++) {
-                        if (j !== i && product[j][0] + product[j][1] > money) break; // 학생 수가 많아지면 무한으로 돌 수 있으니 미리 break를 걸어주기. 
+                        if (j !== i && product[j][0] + product[j][1] > money) break; // 학생 수가 많아지면 무한으로 돌 수 있으니 미리 break를 걸어주기. j는 i면 안된다(할인된거는 제외하고 for문 돌아야함.)
                         if (j !== i && product[j][0] + product[j][1] <= money) {
                             money -= product[j][0] + product[j][1]
                             cnt++
